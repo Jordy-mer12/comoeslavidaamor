@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,19 +78,51 @@ text-decoration: underline;
 
 }
 img{
-border:5px solid darkred;
+border-style: solid;
+border-color: darkred;
+border-radius: 20px;
+border-width: 5px;
 }
-.button-background-color{
-    background-color: blue !important;
-    color:red !important;
-}
-#button-width-hight{
-width: 100px !important;
-height: 100px !important;
-}
+
 .paragraph-height-width{
 height: none;
 width: none;
+}
+
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#Tiktok {
+  top: 40px;
+  background-color: rgb(0,0,0);
+}
+
+#instagram {
+  top: 100px;
+  background-color:pink;
+}
+
+#projects {
+  top: 160px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 220px;
+  background-color: #555
 }
 </style>
 
@@ -140,9 +173,9 @@ Jordy Mercado
                 <main method="main-paragrahp" !important>
                 <h2>Programer</h2>
                 <p>Welcome,my name is Jordy I am programer of websites I
-                 been working hard to make m
-                 ore programing skills I learn every day wi
-                 th <a href="http://freecodecamp.com">freecodecamp</a> you should visite
+                 been working hard to make more
+                  programing skills I learn every day with
+                  <a href="http://freecodecamp.com">freecodecamp</a> you should visite
                   if you wanna become a web devoleper if not its fine for me thanks to my uncle <a href="https://www.youtube.com/c/VirtualDreamers/videos">Gregory</a> 
                   because he showed me freecodecamp and teached me some html which is a programimg language let me show you some programing lannguages I know a
                   nd I think a mastered firts HTML,CSS and Javascript but Java short word for Javascript am steel leaning and my age is 11,share some informasion about you by seding a measage</p>
@@ -169,6 +202,13 @@ Jordy Mercado
             </div>
         </div>  
 
-
+        <div id="mySidenav" class="sidenav">
+            <a href="#Tiktok" id="Tiktok">Tiktok</a>
+            <a href="#Insta" id="instagram">Insta</a>
+            <a href="#Projects" id="projects">Projects</a>
+            <a href="#Contact" id="contact">Contact</a>
+          </div>
+          
+            
         </body>                                        
 </html>
