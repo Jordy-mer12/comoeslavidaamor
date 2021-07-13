@@ -76,6 +76,32 @@ a:hover{
 text-decoration: underline;
 
 }
+details, summary{
+outline: none;
+background-color:none;
+}
+summary{
+font-size: 20px;
+font-family: sans-serif;
+background: #fff;
+color: #000;
+padding: 10px 20px;
+position: relative;
+cursor: pointer;
+}
+details{
+margin-bottom:20px;
+}
+summary::after{
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top:10px solid teal;
+  right: 10px;
+  top:0;
+  bottom: 0;
+  margin: auto;
+}
 img{
 border-style: solid;
 border-color: darkred;
@@ -90,6 +116,10 @@ width: none;
 .submit-message{
 background-color: rgb(53, 3, 3);
 color: #fff;
+}
+.today-date{
+padding-bottom: 10px;
+background-color: none;
 }
 #mySidenav a {
   position: absolute;
@@ -166,10 +196,13 @@ Jordy Mercado
             </details>
             
                 <nav>
-                <input method="Birthdate" type="date">
-                <textarea class="text" method="text-message" type="message" name="message"  placeholder="mesage" required></textarea>
-                <input class="submit-message" type="submit">
+                <input class="today-date" method="date-today" type="date">
+                <textarea style="margin-top: 10px;" class="text" method="text-message" type="message" name="message"  placeholder="mesage" required></textarea>
+                <input id="submit-message" class="submit-message" type="submit">
                 </nav>
+                <script>$('#submit-message').click(function(){
+                  swal('Thanks for submiting')
+                });</script>
                 <script>var whenAmSuperBord="well I act like where having a party I act like am drunk";</script>
                 <script>var myLastName="Mercado or Mer";</script>
                 <script>var olderMySister="Karla she always's steel's my socks she steel's thing from me she's a liar and nobody in my family like's her age is 18";</script>
