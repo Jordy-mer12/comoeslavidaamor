@@ -2,10 +2,94 @@
   Jordy's website
 </title>
 <link href="https://i.pinimg.com/originals/fb/b3/75/fbb375156dea3305fce307faddbc7981.jpg" rel="icon" type="image/x-icon">
+<style>
+#container{
+  font-family: none;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family:none;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-family:none;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <div class="dropdown">
+    <button class="dropbtn">Medias</button>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://www.facebook.com/jordy.mer.1">Facebook</a>
+      <a href="https://www.tiktok.com/@.lelounch?lang=en">Instagram</a>
+      <a href="https://www.instagram.com/merjordy/">Tiktok</a>
+    </div>
+  </div> 
+</div>
+</div>
 <div class="profile">
   
         <div class="profile-banner">
-          
         </div>
         <div class="profile-picture">
         
@@ -113,7 +197,7 @@
         .profile-banner{
           height:40%;
           width:100%;
-          background-image:url('https://picsum.photos/seed/picsum/1000/520');
+          background-image:url('https://scontent.fewr1-6.fna.fbcdn.net/v/t1.6435-9/161340254_110894404408854_661709111919813599_n.jpg?_nc_cat=102&ccb=1-4&_nc_sid=e3f864&_nc_ohc=dX-YnM7O_vQAX8-tz5D&_nc_ht=scontent.fewr1-6.fna&oh=5533a13e02e28579cdd11c2c991db3b5&oe=6133F2E0');
           background-size:100%;
           border-radius:10px;
         }
