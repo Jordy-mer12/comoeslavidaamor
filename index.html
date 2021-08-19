@@ -1,6 +1,28 @@
 <title>
   Jordy's website
 </title>
+<link href="/home/pi/loader.css" rel="stylesheet" type="text/css">
+<script src="/home/pi/function.js">
+  function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 1000);
+
+    function checkReady() {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
+    }
+}
+
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+
+onReady(function () {
+    show('page', true);
+    show('loading', false);
+});
+</script>
 <link href="https://i.pinimg.com/originals/fb/b3/75/fbb375156dea3305fce307faddbc7981.jpg" rel="icon" type="image/x-icon">
 <style>
 #container{
@@ -426,7 +448,6 @@
           font-size:12pt;
           text-decoration:none;
           color:#cacaca;
-          /* border-right:1px solid #cacaca; */
           padding-left:10px;
           padding-right:10px;
         }
@@ -470,3 +491,55 @@
         .content-right ul li:hover{
           background:#ededed;
         }</style>
+<style>body {
+  font-family:"Arial", cursive;
+}
+#page {
+  display: none;
+  visibility: hidden;
+}
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-size:1000px;;
+  background:#222;
+  background-size: 1000px;
+  background-image: url("https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+</style>
+
+<div id="page">
+  <h1>Here is your page</h1>
+  
+  <p>Your content goes here</p>
+  
+  To see the loading image appear, change some content here (in the html frame) and wait a second or two.
+ 
+<p>
+  If you prefer you can use an ajax method, you set up a page with the loading image on it, then the following code will create a response based on the destination page. However, this method probably wont work the way our page is set up because of the response.redirect (which is kinda server side ajax, right?) - can't really demo this on codepen.  
+</p>
+
+<pre>
+    $(document).ready( function() {
+        $.ajax({
+            type: 'get',
+            url: 'http://destination.page.you.want.to.load',
+            success: function(response) {
+                // response = data which has been received and passed on to the 'success' function.
+                $('body').html(response);
+            }
+        });
+    });
+</pre>
+ 
+</div>
+
+
+<div id="loading"></div>
