@@ -23,15 +23,19 @@ onReady(function () {
     show('loading', false);
 });
 </script>
-<link href="https://i.pinimg.com/originals/fb/b3/75/fbb375156dea3305fce307faddbc7981.jpg" rel="icon" type="image/x-icon">
+<link href="https://qph.fs.quoracdn.net/main-qimg-1c3a7320c15aeacaf19b3debc5ff92b9" rel="icon" type="image/x-icon">
 <style>
 #container{
   font-family: none;
+  position:absolute;
+  
 }
 .navbar {
   overflow: hidden;
   background-color: #333;
   font-family:none;
+  position:absolute;
+
 }
 
 .navbar a {
@@ -93,6 +97,7 @@ onReady(function () {
 </style>
 </head>
 <body>
+  <!--
 <div id="container">
   <div class="navbar">
   <a href="#home">Home</a>
@@ -109,6 +114,7 @@ onReady(function () {
   </div> 
 </div>
 </div>
+-->
 <div class="profile">
   
         <div class="profile-banner">
@@ -118,7 +124,7 @@ onReady(function () {
           <a href="" class="add-frnd">Add Friend <span class="entypo-user-add"></span></a>
           <a href="" class="follow">Follow <span class="entypo-plus"></span></a>
           
-          <a href=""><img src="https://i.pinimg.com/originals/fb/b3/75/fbb375156dea3305fce307faddbc7981.jpg"></a>
+          <a href=""><img src="https://qph.fs.quoracdn.net/main-qimg-1c3a7320c15aeacaf19b3debc5ff92b9"></a>
           <span>Jordy Mercado</span>
           <br>
           <small>(Jordy mercado)</small>
@@ -143,7 +149,8 @@ onReady(function () {
           
             <div class="content-md-left">
               
-              <img src="https://i.pinimg.com/originals/fb/b3/75/fbb375156dea3305fce307faddbc7981.jpg">
+              <img src="https://qph.fs.quoracdn.net/main-qimg-1c3a7320c15aeacaf19b3debc5ff92b9">
+       
               
             </div>
             
@@ -153,14 +160,14 @@ onReady(function () {
                 <a href="">Jordy Mercado</a><br>
               </div>
               
-              <div class="post-title-time">
+              <div style="color:red !important;" class="post-title-time">
                 <a href="">Saturday 6:43pm</a>
               </div>
               
                <div class="post-desc">
-            I started programing a year ago and I learned so much over the past months Thank yall for all your soport
+            I started programing a year ago and I learned so much over the past months Thank yall for all your support
                  <br>
-                 <a href=""><img class="main-image-size" src="https://i.pinimg.com/originals/fb/b3/75/fbb375156dea3305fce307faddbc7981.jpg"></a>                
+                 <a href=""><img class="main-image-size" src="https://qph.fs.quoracdn.net/main-qimg-1c3a7320c15aeacaf19b3debc5ff92b9"></a>                
               </div>
               
               <div class="post-info">
@@ -186,6 +193,11 @@ onReady(function () {
               <li><a href=""><span class="entypo-chat"></span></a></li>
               <li><a href=""><span class="entypo-camera"></span></a></li>
               <li><a href=""><span class="entypo-export"></span></a></li>
+
+               <form id="form-container" action="#Jordyswebsite">
+                 <span class="message"><textarea name="message" placeholder="Message:" required></textarea></span>
+                 <input class="button" type="submit" method="submit-message" name="subit-button">
+               </form>
       
               
             </ul>
@@ -193,11 +205,29 @@ onReady(function () {
             
           </div>
           
-          
+        
         </div>
         
           
       </div>
+      <style method="form-up-top-styling-and-background-black"> 
+      body{background-color:black;}
+      #form-cotainer{
+        margin-top:60px;
+        background-color: black;
+        border: 5px solid red;
+      }
+      
+      .message{
+       color:red;
+      }
+      
+      .button{
+         color:white;
+         background-color: black;
+         border:5px solid red;
+      }
+      </style>
       <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
         @import url(https://weloveiconfonts.com/api/?family=entypo);
         
@@ -213,13 +243,15 @@ onReady(function () {
           height:1200px;
           width:1000px;
           margin:0 auto;
+
           border-radius:10px;
         }
         
         .profile-banner{
           height:40%;
           width:100%;
-          background-image:url('https://scontent.fewr1-6.fna.fbcdn.net/v/t1.6435-9/161340254_110894404408854_661709111919813599_n.jpg?_nc_cat=102&ccb=1-4&_nc_sid=e3f864&_nc_ohc=dX-YnM7O_vQAX8-tz5D&_nc_ht=scontent.fewr1-6.fna&oh=5533a13e02e28579cdd11c2c991db3b5&oe=6133F2E0');
+          background-image:url('https://qph.fs.quoracdn.net/main-qimg-1c3a7320c15aeacaf19b3debc5ff92b9');
+          border:5px solid red;
           background-size:100%;
           border-radius:10px;
         }
@@ -232,7 +264,7 @@ onReady(function () {
           position:relative;
           top:-90px;
           text-align:center;
-          border:10px solid #fff;
+          border:10px solid black;
         }
         
         .profile-picture span{
@@ -241,7 +273,7 @@ onReady(function () {
         
         .profile-picture small{
           font-size:13pt;
-          color:#cacaca;
+          color:red;
         }
         .profile-picture img{
           border-radius:50%;
@@ -257,7 +289,7 @@ onReady(function () {
           position:absolute;
           left:-130px;
           top:100px;
-          background:#00A9FA;
+          background:red;
           padding:5px;
           border-radius:10px;
           font-size:13pt;
@@ -271,7 +303,7 @@ onReady(function () {
           position:absolute;
           margin-left:180px;
           top:100px;
-          background:#00A9FA;
+          background:red;
           padding:5px;
           border-radius:10px;
           font-size:13pt;
@@ -290,12 +322,12 @@ onReady(function () {
         
         .follow:hover{
           transition:0.5s;
-          background:#0079FA;
+          background:darkred;
         }
         
         .add-frnd:hover{
           transition:0.5s;
-          background:#0079FA;
+          background:darkred;
         }
         
         .profile-content{
@@ -322,27 +354,28 @@ onReady(function () {
           height:300px;
           width:10%;
         }
-        
+     
         .content-left ul{
           list-style:none;
           padding:0;
-          border:1px solid #f8f8f8;
+          border:1px solid red;
           border-radius: 10px;
         }
         
         .content-left ul li{
           padding:15px;
-          border-bottom:1px solid #f8f8f8;
+          border-bottom:1px solid red;
         }
         
         .content-left ul li:hover{
           transition:0.5s;
-          background:#f8f8f8;
+          background:black;
+          color:red;
         }
         
         .content-left ul li a{
           font-size:14pt;
-          color:#cacaca;
+          color:red;
         }
         
         .content-left ul li span{
@@ -400,7 +433,7 @@ onReady(function () {
         }
         
         .post-title-time a{
-          color:#cacaca;
+          color:red;
         }
         
         .post-title-time a:hover{
@@ -429,7 +462,7 @@ onReady(function () {
         .post-info{
           height:10%;
           width:100%;
-          border-bottom:1px solid #f8f8f8;
+          border-bottom:1px solid red;
           margin-top:-10px;
         }
         
@@ -441,25 +474,25 @@ onReady(function () {
         .post-info ul li{
           float:left;
           margin-right:5px;
-          border-right:1px solid #f8f8f8;
+          border-right:1px solid red;
         }
         
         .post-info ul li a{
           font-size:12pt;
           text-decoration:none;
-          color:#cacaca;
+          color:red;
           padding-left:10px;
           padding-right:10px;
         }
         
         .like:hover{
           transition:0.5s;
-          color:#00A9FA;
+          color:red;
         }
         
         .comment:hover{
           transition:0.5s;
-          color:#121212;
+          color:red;
         }
         
         .share:hover{
@@ -476,7 +509,7 @@ onReady(function () {
           height:50px;
           width:50px;
           display:block;
-          background:#f8f8f8;
+          background:red;
           text-align:center;
           line-height:50px;
           border-radius:50%;
@@ -485,15 +518,23 @@ onReady(function () {
         
         .content-right ul li a{
           text-decoration:none;
-          color:#00A9FA;
+          color:black;
         }
         
         .content-right ul li:hover{
-          background:#ededed;
+          background:red;
         }</style>
 <style>body {
   font-family:"Arial", cursive;
 }
+#footer{
+  background-color: #000;
+  color:white;
+  position:absolute;
+  text-align:left;
+  border:5px solid red;
+}
+/*
 #page {
   display: none;
   visibility: hidden;
@@ -509,12 +550,16 @@ onReady(function () {
   background-size:1000px;;
   background:#222;
   background-size: 1000px;
-  background-image: url("https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1");
+  background-color:black;
+  background-image: url("https://c.tenor.com/ggeq_89f6ngAAAAC/jiren-power.gif");
   background-repeat: no-repeat;
   background-position: center;
 }
-</style>
 
+}
+*/
+</style>
+<!--
 <div id="page">
   <h1>Here is your page</h1>
   
@@ -540,6 +585,10 @@ onReady(function () {
 </pre>
  
 </div>
-
-
 <div id="loading"></div>
+-->
+
+
+<footer id="footer">
+  <p>&copy;USA,New Jersey Saturday 6:43pm</p>
+</footer>
