@@ -1,6 +1,50 @@
 <title>
   Jordy's website
 </title>
+<script>
+  const fs = require('fs');
+const https = require('https');
+const cheerio = require('cheerio');
+
+let pageLink;
+let siteProducts = "";
+
+const options = {
+    host: 'shirts4mike.com',
+    path: '/shirts.php',
+}
+
+let pageLinks = []; //to save my href attributes I got from my first https.resquest
+
+//connect with the website
+const request = https.request(options, function(response){
+    //console.log(options);
+    
+    response.on('data', function (chunk) {
+        const $ = cheerio.load(chunk);
+
+        $('.products li a').each( function(linkIndex) {
+
+            pageLink = $(this).attr('href');
+            pageLinks.push(pageLink);
+
+        });  
+
+        //loop the links I save in var let pageLinks
+        for(var i = 0; i < pageLinks.length; i+= 1){ 
+
+          let pages =  pageLinks[i];
+
+          /** here does not work!  : */
+          const requestPages = https.request((options.host + pages), function(response){
+            response.on('data', function (chunk) {
+                siteProducts += chunk; console.log(siteProducts);
+            });
+          })
+          /** end hier  */
+
+        }
+</script>
 <link href="/home/pi/loader.css" rel="stylesheet" type="text/css">
 <script>
   function onReady(callback) {
@@ -23,7 +67,7 @@ onReady(function () {
     show('loading', false);
 });
 </script>
-<link href="https://qph.fs.quoracdn.net/main-qimg-1c3a7320c15aeacaf19b3debc5ff92b9" rel="icon" type="image/x-icon">
+<link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjqE_FddXnG3pgneNveQZSUk-bVw0swHnIPGWTQ4FyN0wbG5uMzmgiYqIPkcH3dwjQdMU&usqp=CAU" rel="icon" type="image/x-icon">
 <style>
   body{
     background-color:black;
@@ -602,10 +646,9 @@ onReady(function () {
  
 </div>
 <div id="loading"></div>
--->
 
-<!--
+
+
 <footer id="footer">
   <p>&copy;USA,New Jersey Saturday 6:43pm</p>
 </footer>
-<--
